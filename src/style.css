@@ -1,13 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  min-width: 400px;
+  background-color: rgb(46, 46, 46);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+button {
+  position: relative;
+  height: 3rem;
+  width: 5rem;
+  margin: 1rem;
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.15rem;
+  color: white;
+}
+
+/* button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+} */
+
+ul {
+  list-style-type: none;
+  margin-top: 1.5rem;
+}
+
+li {
+  padding: 0.5rem;
+}
+
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.homepage-container {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.homepage-container > * {
+  padding: 1rem;
+}
+
+/* .homepage-container > img {
+  width: 500px;
+  height: auto;
+} */
+
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  border: 3px blue solid;
-  width: auto;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  width: clamp(calc(227px + 2rem + 1.5rem), 40vw, calc(450px + 7rem));
+  border: 1px blue solid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: none;
 }
 
 .menu-item {
-  width: 200px;
-  height: 200px;
-  border: 2px solid black;
+  width: 100%;
+  height: 275px;
+  border: 1px solid black;
+  background-color: gainsboro;
+  border-radius: 0.25rem;
+  overflow: auto;
+}
+
+.menu-item > img {
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+}
+
+.menu-item > h2 {
+  margin-top: 0.75rem;
+  margin-left: 1rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.menu-item > p {
+  margin-left: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
 }

@@ -3,7 +3,9 @@
 function createElement(type, parent, classNames) {
   const item = document.createElement(type);
   parent.appendChild(item);
-  item.classList.add(...classNames);
+  if (classNames.length >= 1) {
+    item.classList.add(...classNames);
+  }
 }
 
 export { createElement };
