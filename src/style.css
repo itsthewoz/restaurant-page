@@ -1,3 +1,13 @@
-p {
-  color: blue;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  border: 3px blue solid;
+  width: auto;
+}
+
+.menu-item {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
 }
